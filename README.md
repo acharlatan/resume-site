@@ -1,9 +1,13 @@
-# Geovanni Hernandez — Marketing in Orbit
+# Geovanni Hernandez — Marketing, with perspective
 
-An interactive marketing portfolio featuring case studies across impact reporting, influencer marketing, and affordable housing. The PULSE and Marketing Insights screenshots show demo data.
+An interactive editorial portfolio about marketing operations, reporting, campaign coordination, and community. The project previews use fictional demo data.
 
-## Develop and deploy
+## Run and build
 
-Run `npm install` and `npm run build`, then serve `dist` over HTTP. Run `npm run deploy` to build and deploy to the configured Cloudflare Worker with Wrangler. `src/scenes.js` contains the Three.js scenes; the rest of the site and its assets are in `dist`.
+Run `npm install` followed by `npm run build`. Serve the `dist` directory over HTTP for a local preview. The page is static; `src/scenes.js` contains the Three.js source and the build creates `dist/scenes.bundle.js`.
 
-The scenes respect reduced-motion preferences and include a Canvas2D fallback when WebGL is unavailable.
+## Deploy
+
+The site is configured for the `resume-site` Cloudflare Worker in `wrangler.jsonc`. With an authenticated Cloudflare account, run `npm run deploy`. A GitHub push does not automatically deploy unless a Cloudflare build connection is configured.
+
+The scenes respect reduced-motion preferences and include a Canvas2D fallback where WebGL is unavailable. The generated celestial hero artwork is `dist/assets/horizon-editorial.webp`.
