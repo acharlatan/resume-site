@@ -1,0 +1,11 @@
+{
+  "name": "geovanni-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "esbuild src/scenes.js --bundle --minify --format=esm --outfile=dist/scenes.bundle.js",
+    "deploy": "npm run build && wrangler deploy"
+  },
+  "dependencies": { "three": "0.186.1" },
+  "devDependencies": { "esbuild": "0.25.12", "wrangler": "4.152.0" }
+}
